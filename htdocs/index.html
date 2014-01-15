@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/kickstart.js"></script> <!-- KICKSTART -->
+<link rel="stylesheet" href="css/kickstart.css" media="all" /> 
+<link rel="stylesheet" href="css/style.css" media="all" />
+<script type="text/javascript" src="js/jQuery.js"></script>
+</head>
+<body>
+
+    <div class ="header">
+        <h2> <center> BestBrightLight</center> </h2>
+    </div>
+    <br>
+ <div id="info1">
+     <p> Welcome to the protoype build of "BestBrightLight.com"
+            It is not anywhere near finished butt, in the mean time, you can
+            create a account, login and check out the concept! Thank you! - BestBrightLight team 
+     </p>
+     
+  
+<form id="form1">
+   <label> First Name : </label> 
+   <input type="text" name="f_name" id="f_name">
+   
+   <label> Last Name : </label> 
+   <input type="text" name="l_name" id="l_name"> 
+   
+   <label> Email : </label> 
+   <input type="text" name="email" id = "email"> 
+   
+   <label> Password : </label>
+   <input type="password" name="pass" id = "pass"> 
+   
+   <label> Confirm Password : </label>
+   <input type="password" name="confirm_pass" id="confirm_pass"> 
+   <br>
+   <br>
+   <input type="submit" name="submit" id="submit" value="Create Account!">
+  </form>  
+ </div>
+    
+<!-- START OF AJAX CALL -->
+<script>   
+    $('#form1').submit(function(event) 
+     {  
+       event.preventDefault();
+       $.ajax(
+       {
+       type: 'POST',
+       url: 'ajax.php',
+       data: $(this).serialize(),
+       dataType: 'json',
+       success: function (data) 
+       {
+       console.log(data);
+       $('#info1').html(data.msg);
+       }
+    });
+ });
+</script>
+ <!-- END OF AJAX CALL --> 
+ 
+ <br>
+ <br>
+ 
+</body>
+</html>
