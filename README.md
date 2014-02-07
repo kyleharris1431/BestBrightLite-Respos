@@ -4,7 +4,7 @@ Okay, this is BestBrightLight.
 
 -- To * People -- 
 
-What is on github is just a general idea of what it may look like. Any changes to the layout & contect can be made. 
+What is on github is just a general idea of what it may look like. Any changes to the layout & content can be made. 
 I don't care, just make sure it is an improvement. Over the last. 
 
 ===========
